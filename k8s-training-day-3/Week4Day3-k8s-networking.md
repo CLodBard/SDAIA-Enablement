@@ -1,6 +1,6 @@
-# DAY 2: SERVICES & NETWORKING
+# DAY 3: SERVICES & NETWORKING
 
-## Lab 2.1: ClusterIP Service (20 minutes)
+## Lab 3.1: ClusterIP Service
 
 ### Objective
 Create internal service for pod-to-pod communication.
@@ -79,7 +79,7 @@ kubectl describe service web-service
 
 ---
 
-## Lab 2.2: NodePort Service (20 minutes)
+## Lab 3.2: NodePort Service
 
 ### Objective
 Create external service accessible from outside cluster.
@@ -167,7 +167,7 @@ curl http://<NODE-IP>:30001
 
 ---
 
-## Lab 2.3: ConfigMap (25 minutes)
+## Lab 3.3: ConfigMap
 
 ### Objective
 Externalize configuration so same image works in dev/prod.
@@ -302,7 +302,7 @@ kubectl exec configmap-volume-pod -- cat /etc/config/LOG_LEVEL
 
 ---
 
-## Lab 2.4: Secrets (20 minutes)
+## Lab 3.4: Secrets
 
 ### Objective
 Store sensitive data (passwords, API keys) separately.
@@ -441,7 +441,7 @@ kubectl exec secret-files-pod -- cat /etc/secrets/database-password
 
 ---
 
-## Lab 2.5: Putting It All Together (30 minutes)
+## Lab 3.5: Putting It All Together
 
 ### Objective
 Create complete application stack with Deployment, Service, ConfigMap, and Secret.
@@ -610,7 +610,7 @@ curl http://<NODE-IP>:30002
 
 ---
 
-## Lab 2.6: Cleanup (5 minutes)
+## Lab 3.6: Cleanup
 
 ### Steps
 ```bash
@@ -629,14 +629,14 @@ kubectl get all
 
 ---
 
-## Day 2 Completion Checklist
+## Day 3 Completion Checklist
 
-- [ ] Lab 2.1: Created ClusterIP Service and accessed from debug pod
-- [ ] Lab 2.2: Created NodePort Service and accessed externally
-- [ ] Lab 2.3: Created ConfigMap and used in pod
-- [ ] Lab 2.4: Created Secret and used in pod
-- [ ] Lab 2.5: Deployed complete application with all components
-- [ ] Lab 2.6: Cleaned up resources
+- [ ] Lab 3.1: Created ClusterIP Service and accessed from debug pod
+- [ ] Lab 3.2: Created NodePort Service and accessed externally
+- [ ] Lab 3.3: Created ConfigMap and used in pod
+- [ ] Lab 3.4: Created Secret and used in pod
+- [ ] Lab 3.5: Deployed complete application with all components
+- [ ] Lab 3.6: Cleaned up resources
 
 ---
 

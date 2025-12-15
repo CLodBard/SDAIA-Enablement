@@ -1,4 +1,4 @@
-# 2-Day Kubernetes Hands-On Labs
+# Kubernetes Hands-On Labs
 
 ## Setup Instructions
 
@@ -17,9 +17,9 @@ kubectl version --client
 
 ---
 
-# DAY 1: DEPLOYMENTS, REPLICASETS & YAML MANIFESTS
+# DAY 2: DEPLOYMENTS, REPLICASETS & YAML MANIFESTS
 
-## Lab 1.1: Your First Deployment (30 minutes)
+## Lab 2.1: Your First Deployment
 
 ### Objective
 Create a simple Deployment with 3 replicas of nginx, understand how pods are managed.
@@ -90,7 +90,7 @@ kubectl describe deployment nginx-app
 
 ---
 
-## Lab 1.2: Understanding Pod Labels & Selectors (20 minutes)
+## Lab 2.2: Understanding Pod Labels & Selectors
 
 ### Objective
 Understand how Deployments track pods using labels and selectors.
@@ -152,7 +152,7 @@ kubectl get replicasets
 
 ---
 
-## Lab 1.3: Scaling Deployments (15 minutes)
+## Lab 2.3: Scaling Deployments
 
 ### Objective
 Understand how to scale applications up and down.
@@ -206,7 +206,7 @@ kubectl get pods -o wide
 
 ---
 
-## Lab 1.4: Rolling Updates (25 minutes)
+## Lab 2.4: Rolling Updates
 
 ### Objective
 Update your app version with zero downtime via rolling update.
@@ -273,7 +273,7 @@ kubectl rollout history deployment/nginx-app
 
 ---
 
-## Lab 1.5: Rollback (15 minutes)
+## Lab 2.5: Rollback
 
 ### Objective
 Learn how to quickly revert a bad update.
@@ -332,7 +332,7 @@ kubectl describe pod <pod-name> | grep Image:
 
 ---
 
-## Lab 1.6: YAML Manifest Deep Dive (20 minutes)
+## Lab 2.6: YAML Manifest Deep Dive
 
 ### Objective
 Understand all fields in a Deployment manifest.
@@ -438,12 +438,12 @@ kubectl get pods
 
 ## Day 1 Completion Checklist
 
-- [ ] Lab 1.1: Deployed nginx and saw 3 pods created
-- [ ] Lab 1.2: Understood labels and selector relationship
-- [ ] Lab 1.3: Scaled deployment up and down
-- [ ] Lab 1.4: Performed rolling update to new image version
-- [ ] Lab 1.5: Rolled back a bad update
-- [ ] Lab 1.6: Understood manifest structure and resource limits
+- [ ] Lab 2.1: Deployed nginx and saw 3 pods created
+- [ ] Lab 2.2: Understood labels and selector relationship
+- [ ] Lab 2.3: Scaled deployment up and down
+- [ ] Lab 2.4: Performed rolling update to new image version
+- [ ] Lab 2.5: Rolled back a bad update
+- [ ] Lab 2.6: Understood manifest structure and resource limits
 
 **Final Proof**: Run this and screenshot:
 ```bash
