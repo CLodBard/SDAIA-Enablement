@@ -453,3 +453,51 @@ kubectl get pods -o wide
 ```
 
 ---
+
+# REFERENCE
+
+## Common kubectl Commands Used in Labs
+
+```bash
+# Deployments
+kubectl create deployment <name> --image=<image>
+kubectl get deployments
+kubectl describe deployment <name>
+kubectl edit deployment <name>
+kubectl delete deployment <name>
+
+# Scaling
+kubectl scale deployment <name> --replicas=<number>
+
+# Rolling updates
+kubectl set image deployment/<name> <container>=<image>
+kubectl rollout status deployment/<name>
+kubectl rollout history deployment/<name>
+kubectl rollout undo deployment/<name>
+
+# Services
+kubectl create service nodeport <name> --tcp=<port>:<targetPort>
+kubectl get service
+kubectl describe service <name>
+kubectl delete service <name>
+
+# ConfigMaps & Secrets
+kubectl create configmap <name> --from-literal=key=value
+kubectl create secret generic <name> --from-literal=key=value
+kubectl get configmap / secret
+kubectl describe configmap / secret <name>
+
+# Pods
+kubectl get pods
+kubectl describe pod <name>
+kubectl logs <pod-name>
+kubectl exec -it <pod-name> -- sh
+kubectl port-forward <pod-name> <local-port>:<pod-port>
+
+# General
+kubectl get all
+kubectl apply -f <file>
+kubectl delete -f <file>
+kubectl get <resource> -o yaml
+kubectl edit <resource> <name>
+```
